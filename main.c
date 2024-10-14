@@ -24,7 +24,7 @@ void selection(int arr[], int n)
 }
 void main()
 {
-    int arr[] = {102, 44, 22, 122, 26, 75, 91, 303, 1023, 12, 3, 82};
+    int arr[] = {102, 44, 22, 122, 26, 75, 91, 303, 1023, 12, 3, 82, 900};
     // Calculate the size of array
     int n = sizeof(arr)/ sizeof(arr[0]);
     selection(arr, n);
