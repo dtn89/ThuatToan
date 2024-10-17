@@ -4,17 +4,17 @@ using namespace std;
 
 int main()
 {
-    enum season {spring, summer, fall, winter};
-    season now = winter;
+    enum class Season {spring, summer, fall, winter};
+    Season now = Season::winter;
     switch(now)
     {
-        case spring:
+        case Season::spring:
             break;
-        case summer:
+        case Season::summer:
             break;
-        case fall:
+        case Season::fall:
             break;
-        case winter:
+        case Season::winter:
             cout << "Stay warm!" << endl;
             break;
     }
