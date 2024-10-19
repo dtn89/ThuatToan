@@ -1,5 +1,10 @@
 {
     "files.associations": {
+<<<<<<< HEAD
         "ostream": "cpp"
+=======
+        "stdlib.h": "c",
+        "stdio.h": "c"
+>>>>>>> f66b2c412c1cb75839ba13b4a8030372b8783964
     }
 }
