@@ -5,8 +5,21 @@
 
 using namespace std;
 
+void print_array(int array[], int size)
+{
+    for(int i = 0; i < size; i++)
+    {
+        cout << array[i] << "\t";
+    }
+    cout << "\n";
+
+}
+
 void play_game()
 {
+    int guesses[250];
+    int guess_count = 0;
+    
     int random = rand() % 251;
     cout << random << endl;
     while(true)
@@ -14,6 +27,10 @@ void play_game()
         int guess;
         cout << "Guess a number: ";
         cin >> guess;
+        
+        // Store guessed value into the array
+        guesses[guess_count++] = guess;
+
         if(guess == random)
         {
             cout << "You win\n";
@@ -28,6 +45,8 @@ void play_game()
             cout << "Too high\n";
         }
     }
+
+    print_array(guesses, guess_count);
 }
 int main()
 {   
