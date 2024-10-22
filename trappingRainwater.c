@@ -54,6 +54,7 @@ void selectionSort(int arr[], int size)
                 min_index = j;
             }
         }
+        // Swap
         int temp = arr[i];
         arr[i] = arr[min_index];
         arr[min_index] = temp;
@@ -111,6 +112,24 @@ bool primeCheck(int value)
     return true;
 }
 
+// Swap function
+void swapTwoNumber(int *a, int *b)
+{
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+// Fibonacci function using recursion
+int fibonacciCalculation(int n)
+{
+    if(n <= 1)
+    {
+        return n;
+    }
+    return fibonacciCalculation(n - 1) + fibonacciCalculation(n - 2);
+}
 int main()
 {
 
@@ -157,6 +176,18 @@ int main()
     for(int i = 0; i < size03; i++)
     {
         printf("%d \t", arr03[i]);
+    }
+    printf("\n");
+
+    int a = 5, b = 10;
+    printf("a = %d and b = %d\n", a, b);
+    swapTwoNumber(&a, &b);
+    printf("a = %d and b = %d\n", a, b);
+
+    int fib = 5;
+    for(int i = 0; i < fib; i++)
+    {
+        printf("%d \t", fibonacciCalculation(i));
     }
     printf("\n");
     return 0;
