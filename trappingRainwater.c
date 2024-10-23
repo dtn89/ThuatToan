@@ -130,6 +130,7 @@ int fibonacciCalculation(int n)
     }
     return fibonacciCalculation(n - 1) + fibonacciCalculation(n - 2);
 }
+
 int main()
 {
 
@@ -190,5 +191,17 @@ int main()
         printf("%d \t", fibonacciCalculation(i));
     }
     printf("\n");
+
+    char res[20];
+    float f_number = 32.23;
+    sprintf(res, "%f", f_number);
+    printf("The string for the floating number is: %s\n", res);
+
+    int var = 10;
+    int *ptr = &var;
+    *ptr = 20;
+    int **ptrr = &ptr;
+    **ptrr = 30;
+    printf("Value of var variable is: %d\n", var);
     return 0;
 }
