@@ -15,6 +15,20 @@ class User
         {
             return status;
         }
+        User()
+        {
+            cout << "Constructor\n";
+        }
+        User(string first_name, string last_name, string status)
+        {
+            this->first_name = first_name;
+            this->last_name = last_name;
+            this->status = status;
+        }
+        ~User()
+        {
+            cout << "Destructor\n";
+        }
 };
 
 int add_user_if_not_exists(vector<User> &users, User user)
@@ -55,6 +69,9 @@ int main()
     me.last_name = "Dang";
     cout << add_user_if_not_exists(user, me) << endl;
     cout << user.size() << endl;
+
+    User user4("Chain", "Link", "Silver");
+    cout << user4.get_status() << endl;
 
     return 0;
 }
