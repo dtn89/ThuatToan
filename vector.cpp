@@ -5,6 +5,16 @@
 
 using namespace std;
 
+void print_vector(vector<int> &data)
+{
+    data.push_back(200);
+    for(int i = 0; i < data.size(); i++)
+    {
+        cout << data[i] << "\t";
+    }
+    cout << endl;
+}
+
 int main()
 {
     vector<int> items = {12, 13};
@@ -13,5 +23,10 @@ int main()
     cout << items[items.size() - 1] << endl;
     items.pop_back();
     cout << items[items.size() - 1] << endl;
+    vector<int> value = {1, 2, 3, 5};
+    print_vector(value);
+    print_vector(value);
+    print_vector(value);
+    print_vector(value);
     return 0;
 }
