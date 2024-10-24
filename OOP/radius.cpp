@@ -18,7 +18,11 @@ class Circle
     
     public:
         // Constructor to initialize the Circle object with a radius
-        Circle(double rad) : radius(rad) {}
+        // Circle(double rad) : radius(rad) {}
+        Circle(double rad)
+        {
+            this->radius = rad;
+        }
 
         double calculateArea()
         {
@@ -45,6 +49,6 @@ int main()
     // Calculate and display the circumference of the Circle
     double circumference = circle.calculateCircumference();
     cout << "Circumference: " << circumference << endl;
-    
+
     return 0;
 }
