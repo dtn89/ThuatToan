@@ -2,6 +2,7 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
+#include <vector>
 
 using namespace std;
 
@@ -15,9 +16,17 @@ void print_array(int array[], int size)
 
 }
 
+void print_vector(vector<int> vectorValue)
+{
+    for(int i = 0; i < vectorValue.size(); i++)
+    {
+        cout << vectorValue[i] << "\t";
+    }
+    cout << "\n";
+}
 void play_game()
 {
-    int guesses[250];
+    vector<int> guesses;
     int guess_count = 0;
     
     int random = rand() % 251;
@@ -29,7 +38,7 @@ void play_game()
         cin >> guess;
         
         // Store guessed value into the array
-        guesses[guess_count++] = guess;
+        guesses.push_back(guess);
 
         if(guess == random)
         {
@@ -46,7 +55,7 @@ void play_game()
         }
     }
 
-    print_array(guesses, guess_count);
+    print_vector(guesses);
 }
 int main()
 {   
