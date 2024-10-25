@@ -15,6 +15,18 @@ class User
         {
             return status;
         }
+        void set_status(string status)
+        {
+            if(status == "Gold" || status == "Silver" || status == "Bronze")
+            {
+                this->status = status;
+            }
+            else
+            {
+                this->status = "No status";
+            }
+        }
+        // Construction
         User()
         {
             cout << "Constructor\n";
@@ -25,10 +37,13 @@ class User
             this->last_name = last_name;
             this->status = status;
         }
+        // Destruction
+        /*
         ~User()
         {
             cout << "Destructor\n";
         }
+        */
 };
 
 int add_user_if_not_exists(vector<User> &users, User user)
@@ -70,7 +85,8 @@ int main()
     cout << add_user_if_not_exists(user, me) << endl;
     cout << user.size() << endl;
 
-    User user4("Chain", "Link", "Silver");
+    User user4("Chain", "Link", "Wood");
+    user4.set_status(user4.get_status());
     cout << user4.get_status() << endl;
 
     return 0;
