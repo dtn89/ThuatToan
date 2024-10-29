@@ -7,6 +7,7 @@ int main(void)
     // Constant pointers
     double x1 = 11.1, x2 = 22.2;
     double* const p1 = &x1; // Khai bao con tro hang va khoi tao
+    *p1 = 99.9;
     // p1 = &x2; // error: assignment of read-only variable 'p1'
     cout << *p1 << endl;
 
